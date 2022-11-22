@@ -1,0 +1,132 @@
+.item {
+    /* Frame 36 */
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 104px;
+    height: 112px;
+
+    /* White */
+    background: #FFFFFF;
+    /* Type - Grass */
+    border: 1px solid #74CB48;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.header {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* padding: 4px 8px 0px; */
+
+    width: 104px;
+    height: 16px;
+    align-items: center;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.header p {
+    /* #999 */
+    width: 88px;
+    height: 12px;
+
+    /* Poppins Regular 8 */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 150% */
+    /* display: flex; */
+    align-items: center;
+    text-align: right;
+    margin-right: 10px;
+
+    /* Type - Grass */
+    color: #74CB48;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.itemImg {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 104px;
+    height: 72px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.footer {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 4px 8px; */
+    border-radius: 0px 0px 8px 8px;
+
+    width: 103px;
+    height: 24px;
+
+    /* Type - Grass */
+    background: #74CB48;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.footer p {
+    /* Pokémon Name */
+    width: 88px;
+    height: 16px;
+
+    /* Poppins Regular 10 */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    /* identical to box height, or 160% */
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+
+    /* White */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
