@@ -5,6 +5,7 @@ import Itens from './Itens';
 
 export default function HomePage() {
 	const [search, setSearch] = useState('');
+	const [ordered, setOrdered] = useState(true);
 	return (
 		<section className={style.hug}>
 			<div className={style.head}>
@@ -12,10 +13,19 @@ export default function HomePage() {
 					<img src="/Pokeball.svg" alt="pokebola" className={style.pokeball} />
 				</div>
 				<h1 className={style.title}>Pokédex</h1>
-				<button className={style.sort}></button>
+				<button type="button" className={style.sort} onClick={() => setOrdered(!ordered)}>
+					<img
+						alt="sort"
+						src={
+							ordered
+								? '/text-sort-ascending-svgrepo-com.svg'
+								: '/sort-amount-down-alt-solid-svgrepo-com.svg'
+						}
+					/>
+				</button>
 			</div>
 			<Search search={search} setSearch={setSearch} />
-			<Itens search={search} />
+			<Itens search={search} ordered={ordered} />
 		</section>
 	);
 }

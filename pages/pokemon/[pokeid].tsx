@@ -1,4 +1,5 @@
 import { PokemonClient } from 'pokenode-ts';
+import { getColor } from '../../utils/getColor';
 import style from './pokeid.module.css';
 
 export async function getServerSideProps(context) {
@@ -15,7 +16,7 @@ export async function getServerSideProps(context) {
 
 export default function poke({ data }) {
 	return (
-		<section className={style.container}>
+		<section style={{ background: getColor(data.types[0].type.name) }} className={style.container}>
 			<div className={style.header}>
 				<div className={style.arrow} />
 				<h1 className={style.name}>{data.name}</h1>
