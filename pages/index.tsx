@@ -13,16 +13,14 @@ export default function HomePage() {
 					<img src="/Pokeball.svg" alt="pokebola" className={style.pokeball} />
 				</div>
 				<h1 className={style.title}>Pokédex</h1>
-				<button type="button" className={style.sort} onClick={() => setOrdered(!ordered)}>
-					<img
-						alt="sort"
-						src={
-							ordered
-								? '/text-sort-ascending-svgrepo-com.svg'
-								: '/sort-amount-down-alt-solid-svgrepo-com.svg'
-						}
-					/>
-				</button>
+				<img
+					className={style.sort}
+					onClick={() => setOrdered(!ordered)}
+					alt="sort"
+					src={ordered ? '/alphabetical-sorting-svgrepo-com.svg' : '/arrow-down-outline.svg'}
+				/>
+				{/* <button type="button" className={style.sort} onClick={() => setOrdered(!ordered)}>
+				</button> */}
 			</div>
 			<Search search={search} setSearch={setSearch} />
 			<Itens search={search} ordered={ordered} />

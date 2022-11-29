@@ -81,12 +81,14 @@
     /* Auto layout */
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     padding: 8px 0px;
     gap: 2px;
-    width: 20px;
+    width: 30px;
     height: 32px;
     border-radius: 8px;
+    justify-content: center;
+    cursor: pointer;
 
     /* Inside auto layout */
     flex: none;

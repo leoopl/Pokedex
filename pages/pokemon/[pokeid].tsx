@@ -1,3 +1,4 @@
+import router from 'next/router';
 import { PokemonClient } from 'pokenode-ts';
 import { getColor } from '../../utils/getColor';
 import style from './pokeid.module.css';
@@ -15,15 +16,52 @@ export async function getServerSideProps(context) {
 }
 
 export default function poke({ data }) {
+	console.log(data.abilities);
 	return (
 		<section style={{ background: getColor(data.types[0].type.name) }} className={style.container}>
 			<div className={style.header}>
-				<div className={style.arrow} />
+				<img
+					alt="arrow left"
+					className={style.arrow}
+					src="/arrow-left.svg"
+					onClick={() => router.push('/')}
+				/>
 				<h1 className={style.name}>{data.name}</h1>
 				<p className={style.number}>#0{data.id}</p>
 			</div>
 			<section className={style.card}>
-				<div className={style.type}></div>
+				<div className={style.type}>
+					{data.types?.map(currentType => (
+						<div
+							key={currentType.slot}
+							className={style.typeFrame}
+							style={{ background: getColor(currentType.type.name) }}
+						>
+							<p>{currentType.type.name}</p>
+						</div>
+					))}
+				</div>
+				<div className={style.title}>
+					<h1 style={{ color: getColor(data.types[0].type.name) }}> Sobre </h1>
+				</div>
+				<section className={style.about}>
+					<div>
+						<h3>Peso</h3>
+						<h1>{data.weight / 10} kg</h1>
+					</div>
+					<div className={style.line} />
+					<div>
+						<h3>Altura</h3>
+						<h1>{data.height / 10} m</h1>
+					</div>
+					<div className={style.line} />
+					<div>
+						<h3>Habilidades</h3>
+						{data.abilities.map(currentAbility => (
+							<h1 key={currentAbility.slot}>{currentAbility.ability.name}</h1>
+						))}
+					</div>
+				</section>
 			</section>
 			<img className={style.image} src={data.sprites.front_default} />
 		</section>

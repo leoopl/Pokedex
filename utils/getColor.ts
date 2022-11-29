@@ -4,7 +4,7 @@ export function getColor(pokeType: String) {
 			return '#AAA67F';
 			break;
 		case 'fighting':
-			return '#C1223';
+			return '#C12239';
 			break;
 		case 'flying':
 			return '#A891EC';
