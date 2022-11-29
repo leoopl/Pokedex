@@ -16,7 +16,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function poke({ data }) {
-	console.log(data.abilities);
+	console.log(data);
 	return (
 		<section style={{ background: getColor(data.types[0].type.name) }} className={style.container}>
 			<div className={style.header}>
