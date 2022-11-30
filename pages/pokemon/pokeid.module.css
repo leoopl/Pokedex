@@ -164,8 +164,13 @@
 
 .line {
     width: 1px;
-    height: 48px;
+    height: 65px;
     background: #E0E0E0;
+}
+
+.content {
+    height: 70px;
+    display: grid;
 }
 
 .about {
@@ -175,7 +180,6 @@
     height: 70px;
     align-items: center;
     justify-content: center;
-    overflow: visible;
 }
 
 .about h3 {
@@ -183,6 +187,8 @@
     font-weight: 400;
     line-height: 16px;
     text-align: justify;
+    margin: 0 auto;
+    position: sticky;
 }
 
 .about h1 {
@@ -191,6 +197,8 @@
     line-height: 12px;
     text-align: center;
     color: #666666;
+    margin-top: 5px;
+    margin-bottom: 5px;
     
     text-transform: capitalize;
 }

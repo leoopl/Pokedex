@@ -45,17 +45,17 @@ export default function poke({ data }) {
 					<h1 style={{ color: getColor(data.types[0].type.name) }}> Sobre </h1>
 				</div>
 				<section className={style.about}>
-					<div>
+					<div className={style.content}>
 						<h3>Peso</h3>
 						<h1>{data.weight / 10} kg</h1>
 					</div>
 					<div className={style.line} />
-					<div>
+					<div className={style.content}>
 						<h3>Altura</h3>
 						<h1>{data.height / 10} m</h1>
 					</div>
 					<div className={style.line} />
-					<div>
+					<div className={style.content}>
 						<h3>Habilidades</h3>
 						{data.abilities.map(currentAbility => (
 							<h1 key={currentAbility.slot}>{currentAbility.ability.name}</h1>
