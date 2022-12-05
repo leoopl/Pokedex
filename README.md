@@ -2,6 +2,7 @@
 # Pokédex
 
 Criação basica de uma Pokédex com PokeAPI ( https://github.com/Gabb-c/pokenode-ts ), implementando a barra de busca e o botão de ordenação por ordem alfabetica.
+Ultilizando também rotas dinamicas oferecida pelo NextJS para apresentação de cada pokemon.
 
 
 ## Screenshots
