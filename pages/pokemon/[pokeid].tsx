@@ -16,7 +16,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function poke({ data }) {
-	console.log(data);
+	// console.log(data.stats.map(currentStats => console.log(currentStats.base_stat)));
 	return (
 		<section style={{ background: getColor(data.types[0].type.name) }} className={style.container}>
 			<div className={style.header}>
@@ -60,6 +60,29 @@ export default function poke({ data }) {
 						{data.abilities.map(currentAbility => (
 							<h1 key={currentAbility.slot}>{currentAbility.ability.name}</h1>
 						))}
+					</div>
+				</section>
+				<div className={style.title}>
+					<h1 style={{ color: getColor(data.types[0].type.name) }}> Status </h1>
+				</div>
+				<section className={style.stats}>
+					<div className={style.statsName}>
+						<ul>
+							<li style={{ color: getColor(data.types[0].type.name) }}>HP</li>
+							<li style={{ color: getColor(data.types[0].type.name) }}>ATK</li>
+							<li style={{ color: getColor(data.types[0].type.name) }}>DEF</li>
+							<li style={{ color: getColor(data.types[0].type.name) }}>SATK</li>
+							<li style={{ color: getColor(data.types[0].type.name) }}>SDEF</li>
+							<li style={{ color: getColor(data.types[0].type.name) }}>SPD</li>
+						</ul>
+					</div>
+					<div className={style.secondLine} />
+					<div className={style.statsName}>
+						<ul>
+							{data.stats.map(currentStats => {
+								return <li>{currentStats.base_stat}</li>;
+							})}
+						</ul>
 					</div>
 				</section>
 			</section>

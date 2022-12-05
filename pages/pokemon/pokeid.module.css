@@ -203,4 +203,49 @@
     text-transform: capitalize;
 }
 
+.stats {
+    /* Auto layout */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 312px;
+    height: 145px;
+
+}
+
+.statsName {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 35px;
+    height: 145px;
+}
+
+.statsName ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.statsName ul li {
     
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    color: #000000;
+}
+
+.secondLine {
+    width: 1px;
+    height: 150px;
+    background: #E0E0E0;
+}
